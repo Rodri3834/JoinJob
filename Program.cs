@@ -57,3 +57,14 @@ string[] DelNumbers(string[] text)
     }
     return result;
 }
+
+// 5. Метод печати рядом двух массивов
+void Print2ArrayStrings(string[] text, string[] text2)
+{
+    int size = text.Length;
+    for (int i = 0; i < size; i++)
+    {
+        Console.WriteLine($"{text[i],15}{text2[i],19}");
+    }
+}
+
