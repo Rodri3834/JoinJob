@@ -83,3 +83,20 @@ int CountEmptyItems(string[] text)
     return count;
 }
 
+// 7. Метод удаления из массива пустых элементов
+string[] DelEmptyItems(string[] text, int countNull)
+{
+    int size = text.Length;
+    string[] result = new string[size - countNull];
+    int correctItem = 0;
+    for (int i = 0; i < size; i++)
+    {
+        if (text[i] != null)
+        {
+            result[i - correctItem] = text[i];
+        }
+        else correctItem++;
+    }
+    return result;
+}
+
