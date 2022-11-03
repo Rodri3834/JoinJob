@@ -37,3 +37,23 @@ void PrintArrayStrings(string[] text)
         Console.WriteLine(text[i]);
     }
 }
+
+// 4. Метод удаления цифр из массива строк
+string[] DelNumbers(string[] text)
+{
+    int size = text.Length;
+    string[] result = new string[size];
+    int lengthItem = 0;
+    for (int i = 0; i < size; i++)
+    {
+        lengthItem = text[i].Length;
+        for (int j = 0; j < lengthItem; j++)
+        {
+            if (!(text[i][j] >= '0' && text[i][j] <= '9'))
+            {
+                result[i] += text[i][j];
+            }
+        }
+    }
+    return result;
+}
