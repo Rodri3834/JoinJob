@@ -68,3 +68,18 @@ void Print2ArrayStrings(string[] text, string[] text2)
     }
 }
 
+// 6. Метод подсчета количества пустых строк
+int CountEmptyItems(string[] text)
+{
+    int count = 0;
+    int size = text.Length;
+    for (int i = 0; i < size; i++)
+    {
+        if (text[i] == null)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
