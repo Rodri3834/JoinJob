@@ -64,7 +64,7 @@ void Print2ArrayStrings(string[] text, string[] text2)
     int size = text.Length;
     for (int i = 0; i < size; i++)
     {
-        Console.WriteLine($"{text[i],15}{text2[i],19}");
+        Console.WriteLine($"{text[i],10}{text2[i],17}");
     }
 }
 
@@ -100,3 +100,21 @@ string[] DelEmptyItems(string[] text, int countNull)
     return result;
 }
 
+string chars = "AaBbCcDdEeFfGgHhIiGgKkLlNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789";
+string[] text = CreateArrayStrings(6);
+FillArrayStrings(text, chars, 3, 10);
+string[] result = DelNumbers(text);
+int nullStrings = CountEmptyItems(result);
+if (nullStrings > 0)
+{
+    string[] resultEnd = DelEmptyItems(result, nullStrings);
+    Console.WriteLine("Начальный массив:");
+    PrintArrayStrings(text);
+    Console.WriteLine("\nРезультат:");
+    PrintArrayStrings(resultEnd);
+}
+else
+{
+    Console.WriteLine("Начальный массив -> Результат");
+    Print2ArrayStrings(text, result);
+}
