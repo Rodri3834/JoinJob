@@ -27,3 +27,13 @@ void FillArrayStrings(string[] text, string selectChar, int lengthItemMin, int l
         }
     }
 }
+
+// 3. Метод распечатки массива
+void PrintArrayStrings(string[] text)
+{
+    int size = text.Length;
+    for (int i = 0; i < size; i++)
+    {
+        Console.WriteLine(text[i]);
+    }
+}
